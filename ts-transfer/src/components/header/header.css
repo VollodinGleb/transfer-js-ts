@@ -1,0 +1,20 @@
+/*<< Func scrolled */
+#main-nav-menu.scrolled
+{
+    background-color: hsla(238, 59%, 30%, 0.95);
+}
+
+/* When RESPONSIVE MENU is active */
+@media screen and (max-width: 1100px){
+    .responsive-menu.active 
+    {
+        display: block;
+    }
+}
+@media screen and (max-width: 330px) {
+    .navigation-toggle
+    {
+        margin: 0;
+    }
+}
+/*  >>*/
