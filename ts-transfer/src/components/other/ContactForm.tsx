@@ -58,19 +58,19 @@ export default function ContactForm() {
   const classes = ContactFormStyles();
   return (
     <FormStyles className={classes.form}>
-      <div class={classes.wrapBoxes}>
-        <div class={classes.rightBox}>
+      <div className={classes.wrapBoxes}>
+        <div className={classes.rightBox}>
           <Input choose={'input'} name={'Name'} placeholder={'Enter your name'}></Input>
           <Input choose={'input'} name={'Email'} placeholder={'Enter your email'}></Input>
         </div>
-        <div class={classes.leftBox}>
+        <div className={classes.leftBox}>
           <Input choose={'input'} name={'Subject'} placeholder={'Provide context'}></Input>
           <Input choose={'input'} name={'Subject'} placeholder={'Provide Subject'}></Input>
         </div>
       </div>
 
-      <div class="textarea-container">
-        <div class="wrap-textarea">
+      <div className="textarea-container">
+        <div className="wrap-textarea">
           <Input
             choose={'textarea'}
             name={'Message'}
@@ -79,7 +79,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div class="wrap-button" style={{ marginBottom: '10px', marginTop: '10px' }}>
+      <div className="wrap-button" style={{ marginBottom: '10px', marginTop: '10px' }}>
         <RadiusButton text={'Send Messege'}></RadiusButton>
       </div>
     </FormStyles>

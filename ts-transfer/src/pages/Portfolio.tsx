@@ -23,8 +23,8 @@ export default function Portfolio() {
         <h3>What we created</h3>
         <h1>Our Work Portfolio</h1>
         <p>
-          We help teams create great digital products by providing them with tools and technology to
-          make the design-to-code process universally accessible.
+          We help teams create great digital products by providing them with tools and technology to make the
+          design-to-code process universally accessible.
         </p>
         <SocialContainer justify={'center'}>
           <Icon href={'https://www.facebook.com/'} icon={blackFacebook} />
@@ -62,8 +62,8 @@ export default function Portfolio() {
         <Section id="cta-section">
           <h1>Let`s build something great together</h1>
           <p>
-            Nullam vitae purus at tortor mattis dapibus. Morbi purus est, ultricies nec dolor sit
-            amet, scelerisque cursus purus.
+            Nullam vitae purus at tortor mattis dapibus. Morbi purus est, ultricies nec dolor sit amet, scelerisque
+            cursus purus.
           </p>
           <RadiusButton text="Contuct Us" />
         </Section>
