@@ -16,8 +16,8 @@ const CardStyles = createUseStyles({
 export default function Card({ image, date, title, text, children }) {
   const classes = CardStyles();
   return (
-    <div class="card">
-      <div class={classes.cardContainer}>
+    <div className="card">
+      <div className={classes.cardContainer}>
         <div className="conteiner-image">
           <img className={classes.CardImage} src={image} alt="img" />
         </div>

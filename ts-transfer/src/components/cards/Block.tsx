@@ -1,4 +1,12 @@
+import { FC } from 'react';
 import { createUseStyles } from 'react-jss';
+
+interface Block {
+  image: string;
+  title: string;
+  text: string;
+  children?: JSX.Element;
+}
 
 const BlockStyles = createUseStyles({
   BlockContainer: {
@@ -31,11 +39,12 @@ const BlockStyles = createUseStyles({
   },
 });
 
-export default function Block({ image, title, text, children }) {
+const Block: FC<Block> = ({ image, title, text, children }) => {
   const classes = BlockStyles();
+
   return (
-    <div class="block">
-      <div class={classes.BlockContainer}>
+    <div className="block">
+      <div className={classes.BlockContainer}>
         <div className="conteiner-block-image">
           <img className={classes.BlockImage} src={image} alt="img" />
         </div>
@@ -50,4 +59,6 @@ export default function Block({ image, title, text, children }) {
       </div>
     </div>
   );
-}
+};
+
+export default Block;

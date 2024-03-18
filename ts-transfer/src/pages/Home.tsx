@@ -40,8 +40,8 @@ export default function Home() {
       >
         <h1>Building stellar websites for early startups</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta perspiciatis enim itaque
-          ratione esse? Officiis, culpa quisquam.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta perspiciatis enim itaque ratione esse?
+          Officiis, culpa quisquam.
         </p>
       </FullScreenHeader>
 
@@ -49,34 +49,16 @@ export default function Home() {
         <Section id="How-work">
           <Heading className={'work-heading'}>
             <h2>How we work</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quos totam ducimus.
-            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quos totam ducimus.</p>
             <ArrowButton href={'./'} color={'#2405F2'} text={'Get in touch with us'} />
           </Heading>
 
           <WrapContainer>
             <div className="work-cards">
-              <Card
-                image={pointer1}
-                title={TitleCards.workCards[0]}
-                text={TextCards.workCards}
-              ></Card>
-              <Card
-                image={pointer2}
-                title={TitleCards.workCards[1]}
-                text={TextCards.workCards}
-              ></Card>
-              <Card
-                image={pointer3}
-                title={TitleCards.workCards[2]}
-                text={TextCards.workCards}
-              ></Card>
-              <Card
-                image={pointer4}
-                title={TitleCards.workCards[3]}
-                text={TextCards.workCards}
-              ></Card>
+              <Card image={pointer1} title={TitleCards.workCards[0]} text={TextCards.workCards}></Card>
+              <Card image={pointer2} title={TitleCards.workCards[1]} text={TextCards.workCards}></Card>
+              <Card image={pointer3} title={TitleCards.workCards[2]} text={TextCards.workCards}></Card>
+              <Card image={pointer4} title={TitleCards.workCards[3]} text={TextCards.workCards}></Card>
             </div>
           </WrapContainer>
         </Section>
@@ -89,36 +71,12 @@ export default function Home() {
 
           <WrapContainer>
             <div className="feature-cards">
-              <Card
-                image={clients}
-                title={TitleCards.featureCards[0]}
-                text={TextCards.featureCards}
-              ></Card>
-              <Card
-                image={correct}
-                title={TitleCards.featureCards[1]}
-                text={TextCards.featureCards}
-              ></Card>
-              <Card
-                image={pencil}
-                title={TitleCards.featureCards[2]}
-                text={TextCards.featureCards}
-              ></Card>
-              <Card
-                image={comment}
-                title={TitleCards.featureCards[3]}
-                text={TextCards.featureCards}
-              ></Card>
-              <Card
-                image={timmer}
-                title={TitleCards.featureCards[4]}
-                text={TextCards.featureCards}
-              ></Card>
-              <Card
-                image={note}
-                title={TitleCards.featureCards[5]}
-                text={TextCards.featureCards}
-              ></Card>
+              <Card image={clients} title={TitleCards.featureCards[0]} text={TextCards.featureCards}></Card>
+              <Card image={correct} title={TitleCards.featureCards[1]} text={TextCards.featureCards}></Card>
+              <Card image={pencil} title={TitleCards.featureCards[2]} text={TextCards.featureCards}></Card>
+              <Card image={comment} title={TitleCards.featureCards[3]} text={TextCards.featureCards}></Card>
+              <Card image={timmer} title={TitleCards.featureCards[4]} text={TextCards.featureCards}></Card>
+              <Card image={note} title={TitleCards.featureCards[5]} text={TextCards.featureCards}></Card>
             </div>
           </WrapContainer>
         </Section>
@@ -151,28 +109,13 @@ export default function Home() {
 
           <WrapContainer>
             <div className="blog-cards">
-              <Card
-                image={hands}
-                date={'19 Jan 2022'}
-                title={TitleCards.blogCards[0]}
-                text={TextCards.blogCards}
-              >
+              <Card image={hands} date={'19 Jan 2022'} title={TitleCards.blogCards[0]} text={TextCards.blogCards}>
                 <ArrowButton href={'./'} color={'#2405F2'} text={'Read More'} />
               </Card>
-              <Card
-                image={computers}
-                date={'19 Jan 2022'}
-                title={TitleCards.blogCards[0]}
-                text={TextCards.blogCards}
-              >
+              <Card image={computers} date={'19 Jan 2022'} title={TitleCards.blogCards[0]} text={TextCards.blogCards}>
                 <ArrowButton href={'./'} color={'#2405F2'} text={'Read More'} />
               </Card>
-              <Card
-                image={PCperson}
-                date={'19 Jan 2022'}
-                title={TitleCards.blogCards[0]}
-                text={TextCards.blogCards}
-              >
+              <Card image={PCperson} date={'19 Jan 2022'} title={TitleCards.blogCards[0]} text={TextCards.blogCards}>
                 <ArrowButton href={'./'} color={'#2405F2'} text={'Read More'} />
               </Card>
             </div>
