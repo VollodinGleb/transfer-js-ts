@@ -1,5 +1,11 @@
+import { FC } from 'react';
 import { createUseStyles } from 'react-jss';
 import { NavLink } from 'react-router-dom';
+
+interface MenuProps {
+  id?: string;
+  useFor: string;
+}
 
 const MenuStyles = createUseStyles({
   Menu: {
@@ -50,8 +56,9 @@ const MenuStyles = createUseStyles({
   },
 });
 
-export default function Menu({ id, useFor }) {
+const Menu: FC<MenuProps> = ({ id, useFor }) => {
   const classes = MenuStyles();
+
   return (
     <ul
       id={id}
@@ -83,4 +90,6 @@ export default function Menu({ id, useFor }) {
       </li>
     </ul>
   );
-}
+};
+
+export default Menu;

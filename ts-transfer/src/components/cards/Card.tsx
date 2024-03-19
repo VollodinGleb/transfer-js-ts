@@ -1,4 +1,13 @@
+import { FC } from 'react';
 import { createUseStyles } from 'react-jss';
+
+interface CardProps {
+  image: string;
+  date?: string;
+  title: string;
+  text: string;
+  children?: JSX.Element;
+}
 
 const CardStyles = createUseStyles({
   cardContainer: {
@@ -13,8 +22,9 @@ const CardStyles = createUseStyles({
   },
 });
 
-export default function Card({ image, date, title, text, children }) {
+const Card: FC<CardProps> = ({ image, date, title, text, children }) => {
   const classes = CardStyles();
+
   return (
     <div className="card">
       <div className={classes.cardContainer}>
@@ -31,4 +41,6 @@ export default function Card({ image, date, title, text, children }) {
       </div>
     </div>
   );
-}
+};
+
+export default Card;

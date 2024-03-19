@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { createUseStyles } from 'react-jss';
 
-interface Block {
+interface BlockProps {
   image: string;
   title: string;
   text: string;
-  children?: JSX.Element;
+  children?: JSX.Element | JSX.Element[];
 }
 
 const BlockStyles = createUseStyles({
@@ -39,7 +39,7 @@ const BlockStyles = createUseStyles({
   },
 });
 
-const Block: FC<Block> = ({ image, title, text, children }) => {
+const Block: FC<BlockProps> = ({ image, title, text, children }) => {
   const classes = BlockStyles();
 
   return (

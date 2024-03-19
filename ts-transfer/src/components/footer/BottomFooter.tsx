@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { createUseStyles } from 'react-jss';
 import Menu from '../header/headerComponents/Menu';
 
@@ -21,8 +22,9 @@ const BottomStyles = createUseStyles({
   },
 });
 
-export default function BottomFooter() {
+const BottomFooter: FC = () => {
   const classes = BottomStyles();
+
   return (
     <div className={classes.footerBottom}>
       <div className={classes.containerBottom}>
@@ -34,4 +36,6 @@ export default function BottomFooter() {
       </div>
     </div>
   );
-}
+};
+
+export default BottomFooter;

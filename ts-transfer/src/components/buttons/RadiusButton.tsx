@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { createUseStyles } from 'react-jss';
 
-interface RadiusButton {
+interface RadiusButtonProps {
   href: string;
   text: string;
 }
@@ -22,7 +22,7 @@ const useStyles = createUseStyles({
   },
 });
 
-const RadiusButton: FC<RadiusButton> = ({ href, text }) => {
+const RadiusButton: FC<RadiusButtonProps> = ({ href, text }) => {
   const classes = useStyles();
   return (
     <a className={classes.radiusButton} href={href}>
