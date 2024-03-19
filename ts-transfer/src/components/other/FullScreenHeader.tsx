@@ -2,6 +2,12 @@ import { createUseStyles } from 'react-jss';
 import ArrowButton from '../buttons/ArrowButton';
 import RadiusButton from '../buttons/RadiusButton';
 
+interface FullScreenProps {
+  backColor: string;
+  color: string;
+  height: string;
+}
+
 const FullScreenHeaderStyles = createUseStyles({
   header: {
     backgroundColor: props => props.backColor,
@@ -81,6 +87,7 @@ const FullScreenHeaderStyles = createUseStyles({
 
 export default function FullScreenHeader({ children, status, ...props }) {
   const classes = FullScreenHeaderStyles({ ...props });
+  
   return (
     <div className={classes.header}>
       <div className={classes.wrapContainer}>

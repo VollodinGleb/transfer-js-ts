@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { createUseStyles } from 'react-jss';
 import Menu from './Menu';
 
@@ -54,7 +55,7 @@ const ResponsiveStyles = createUseStyles({
   },
 });
 
-export default function ResponsiveMenu() {
+const ResponsiveMenu: FC = () => {
   const classes = ResponsiveStyles();
   return (
     <div className={classes.responsiveContainer}>
@@ -62,8 +63,10 @@ export default function ResponsiveMenu() {
         <span>&#215;</span>
       </div>
       <div className={classes.menuContainer}>
-        <Menu id="ResponsiveMenu"></Menu>
+        <Menu id="ResponsiveMenu" useFor='header'></Menu>
       </div>
     </div>
   );
 }
+
+export default ResponsiveMenu;

@@ -71,7 +71,7 @@ const Menu: FC<MenuProps> = ({ id, useFor }) => {
       }
     >
       <li className={classes.item}>
-        <NavLink to="/winter-practic/">Home</NavLink>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li className={classes.item}>
         <NavLink to="/winter-practic/portfolio/">Portfolio</NavLink>

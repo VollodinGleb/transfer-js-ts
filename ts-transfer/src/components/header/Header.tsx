@@ -1,9 +1,10 @@
+import { FC } from 'react';
 import NavBar from './headerComponents/NavBar';
 import logo from './../../assets/logo.svg';
 import './header.css';
 import ResponsiveMenu from './headerComponents/ResponsiveMenu';
 
-export default function Header({}) {
+const Header: FC = () => {
   return (
     <header id="nav">
       <NavBar logo={logo} />
@@ -14,3 +15,5 @@ export default function Header({}) {
     </header>
   );
 }
+
+export default Header;

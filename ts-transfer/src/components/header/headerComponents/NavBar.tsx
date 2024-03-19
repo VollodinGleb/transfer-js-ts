@@ -2,6 +2,11 @@ import { createUseStyles } from 'react-jss';
 import { NavLink } from 'react-router-dom';
 import Menu from './Menu';
 import NavToogle from './NavToogle';
+import { FC } from 'react';
+
+interface NavBarProps {
+  logo: string
+}
 
 const NavBarStyles = createUseStyles({
   mainNavMenu: {
@@ -68,12 +73,12 @@ const NavBarStyles = createUseStyles({
   },
 });
 
-export default function NavBar({ logo }) {
+const NavBar: FC<NavBarProps> = ({ logo }) => {
   const classes = NavBarStyles();
   return (
     <nav className={classes.mainNavMenu} id="main-nav-menu">
       <div className={classes.navMenu}>
-        <NavLink className={classes.logo} to="/winter-practic/">
+        <NavLink className={classes.logo} to="/">
           <img src={logo} alt="logo" />
         </NavLink>
 
@@ -90,3 +95,5 @@ export default function NavBar({ logo }) {
     </nav>
   );
 }
+
+export default NavBar;
