@@ -1,6 +1,12 @@
+import { FC } from 'react';
 import styled from 'styled-components';
 
-const Social = styled.ul`
+interface SocialProps {
+  justify?: string;
+  children?: JSX.Element | JSX.Element[];
+}
+
+const Social: FC<SocialProps> = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: ${props => props.justify || 'start'};
@@ -11,6 +17,8 @@ const Social = styled.ul`
   color: #000;
 `;
 
-export default function SocialContainer({ justify, children }) {
+const SocialContainer: FC<SocialProps> = ({ justify, children }) => {
   return <Social justify={justify}>{children}</Social>;
-}
+};
+
+export default SocialContainer;
