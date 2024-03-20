@@ -1,4 +1,9 @@
+import { FC } from 'react';
 import { createUseStyles } from 'react-jss';
+
+interface NavToogle {
+  onClick?: any
+}
 
 const ToogleStyles = createUseStyles({
   navigationToggle: {
@@ -25,7 +30,7 @@ const ToogleStyles = createUseStyles({
   },
 });
 
-export default function NavToogle({ onClick }) {
+const NavToogle: FC<NavToogle> = ({ onClick }) => {
   const classes = ToogleStyles();
   return (
     <button className={classes.navigationToggle} onClick={onClick}>
@@ -35,3 +40,5 @@ export default function NavToogle({ onClick }) {
     </button>
   );
 }
+
+export default NavToogle;

@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import styled from 'styled-components';
 import { createUseStyles } from 'react-jss';
 import Input from './Input';
@@ -54,7 +55,7 @@ const ContactFormStyles = createUseStyles({
   },
 });
 
-export default function ContactForm() {
+const ContactForm: FC = () => {
   const classes = ContactFormStyles();
   return (
     <FormStyles className={classes.form}>
@@ -80,8 +81,10 @@ export default function ContactForm() {
       </div>
 
       <div className="wrap-button" style={{ marginBottom: '10px', marginTop: '10px' }}>
-        <RadiusButton text={'Send Messege'}></RadiusButton>
+        <RadiusButton href='' text={'Send Messege'}></RadiusButton>
       </div>
     </FormStyles>
   );
 }
+
+export default ContactForm;

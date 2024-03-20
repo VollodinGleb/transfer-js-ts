@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { createUseStyles } from 'react-jss';
 
 const ContactBlockStyles = createUseStyles({
@@ -48,7 +49,7 @@ const ContactBlockStyles = createUseStyles({
   },
 });
 
-export default function ContactsBlock() {
+const ContactsBlock: FC = () => {
   const classes = ContactBlockStyles();
   return (
     <div className={classes.contactsBlock}>
@@ -63,3 +64,5 @@ export default function ContactsBlock() {
     </div>
   );
 }
+
+export default ContactsBlock;

@@ -17,7 +17,7 @@ export default function App() {
         <Header />
 
         <Routes>
-          <Route path="winter-practic/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="winter-practic/portfolio/" element={<Portfolio />} />
           <Route path="winter-practic/features/" element={<Features />} />
           <Route path="winter-practic/pricing/" element={<Pricing />} />
