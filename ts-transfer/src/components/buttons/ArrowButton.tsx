@@ -8,7 +8,12 @@ interface ArrowButtonProps {
   spacing?: string;
 }
 
-const Button = styled.a<{ color?: string; spacing?: string }>`
+type StyledProps = {
+  color?: string;
+  spacing?: string;
+};
+
+const Button = styled.a<StyledProps>`
   display: inline-block;
   padding: 10px 10px 10px 0px;
   margin-left: ${props => props.spacing || '0px'};
@@ -16,7 +21,7 @@ const Button = styled.a<{ color?: string; spacing?: string }>`
   color: ${props => props.color || '#fff'};
 `;
 
-const Arrow = styled.span<{ color?: string }>`
+const Arrow = styled.span<StyledProps>`
   font-size: 22px;
   font-weight: 600;
   color: ${props => props.color || '#fff'};
