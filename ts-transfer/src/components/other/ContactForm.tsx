@@ -65,8 +65,16 @@ const ContactForm: FC = () => {
           <Input choose={'input'} name={'Email'} placeholder={'Enter your email'}></Input>
         </div>
         <div className={classes.leftBox}>
-          <Input choose={'input'} name={'Subject'} placeholder={'Provide context'}></Input>
-          <Input choose={'input'} name={'Subject'} placeholder={'Provide Subject'}></Input>
+          <Input
+            choose={'input'}
+            name={'Subject'}
+            placeholder={'Provide context'}
+          ></Input>
+          <Input
+            choose={'input'}
+            name={'Subject'}
+            placeholder={'Provide Subject'}
+          ></Input>
         </div>
       </div>
 
@@ -81,10 +89,10 @@ const ContactForm: FC = () => {
       </div>
 
       <div className="wrap-button" style={{ marginBottom: '10px', marginTop: '10px' }}>
-        <RadiusButton href='' text={'Send Messege'}></RadiusButton>
+        <RadiusButton href="" text={'Send Messege'}></RadiusButton>
       </div>
     </FormStyles>
   );
-}
+};
 
 export default ContactForm;

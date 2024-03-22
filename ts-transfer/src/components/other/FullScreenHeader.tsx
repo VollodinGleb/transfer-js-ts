@@ -1,17 +1,18 @@
 import { createUseStyles } from 'react-jss';
 import ArrowButton from '../buttons/ArrowButton';
 import RadiusButton from '../buttons/RadiusButton';
+import { FC } from 'react';
 
 interface FullScreenProps {
   backColor: string;
-  color: string;
+  Color: string;
   height: string;
 }
 
 const FullScreenHeaderStyles = createUseStyles({
-  header: {
-    backgroundColor: props => props.backColor,
-    color: props => props.color,
+  header: ({backColor, Color}: FullScreenProps) =>  {
+    backgroundColor: backColor,
+    color: Color,
     height: props => props.height,
 
     '@media (max-width: 725px)': {
@@ -85,16 +86,19 @@ const FullScreenHeaderStyles = createUseStyles({
   },
 });
 
-export default function FullScreenHeader({ children, status, ...props }) {
+const FullScreenHeader = ({ children, status, ...props }) => {
   const classes = FullScreenHeaderStyles({ ...props });
-  
+
   return (
     <div className={classes.header}>
       <div className={classes.wrapContainer}>
         <div className={classes.headerDescription}>
           {children}
 
-          <div className={classes.linkButtons} style={status === 'act' ? {} : { display: 'none' }}>
+          <div
+            className={classes.linkButtons}
+            style={status === 'act' ? {} : { display: 'none' }}
+          >
             <RadiusButton href={'./'} text={'Vie our work'} />
             <ArrowButton href={'./'} text={'Vie Pricingk'} spacing={'25px'} />
           </div>
@@ -102,4 +106,6 @@ export default function FullScreenHeader({ children, status, ...props }) {
       </div>
     </div>
   );
-}
+};
+
+export default FullScreenHeader;
