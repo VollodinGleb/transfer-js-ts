@@ -1,11 +1,10 @@
 import { createUseStyles } from 'react-jss';
 import ArrowButton from '../buttons/ArrowButton';
 import RadiusButton from '../buttons/RadiusButton';
-import { FC } from 'react';
 
 interface FullScreenProps {
   backColor: string;
-  Color: string;
+  color: string;
   height: string;
 
   children?: JSX.Element | JSX.Element[];
@@ -14,8 +13,8 @@ interface FullScreenProps {
 
 const FullScreenHeaderStyles = createUseStyles({
   header: {
-    backgroundColor: backColor,
-    color: Color,
+    backgroundColor: props => props.backColor,
+    color: props => props.color,
     height: props => props.height,
 
     '@media (max-width: 725px)': {
