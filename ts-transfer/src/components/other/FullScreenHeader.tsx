@@ -6,6 +6,9 @@ interface FullScreenProps {
   backColor: string;
   color: string;
   height: string;
+
+  children?: JSX.Element | JSX.Element[];
+  status?: string;
 }
 
 const FullScreenHeaderStyles = createUseStyles({
@@ -85,7 +88,7 @@ const FullScreenHeaderStyles = createUseStyles({
   },
 });
 
-const FullScreenHeader = ({ children, status, ...props }) => {
+const FullScreenHeader: FC<FullScreenProps> = ({ children, status, ...props }) => {
   const classes = FullScreenHeaderStyles({ ...props });
 
   return (
