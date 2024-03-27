@@ -1,14 +1,15 @@
 import { createUseStyles } from 'react-jss';
 import ArrowButton from '../buttons/ArrowButton';
 import RadiusButton from '../buttons/RadiusButton';
+import { FC } from 'react';
 
 interface FullScreenProps {
   backColor: string;
   color: string;
   height: string;
 
+  status: string;
   children?: JSX.Element | JSX.Element[];
-  status?: string;
 }
 
 const FullScreenHeaderStyles = createUseStyles({
